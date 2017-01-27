@@ -4,6 +4,10 @@
   "description": "Sencilla app con MEAN",
   "main": "server.js",
   "author": "Francisco Roca",
+  "repository" : { 
+     "type" : "git",
+     "url" : "https://github.com/tapmapp/test"
+   },
   "dependencies": {
     "angular-google-chart": "^0.1.0",
     "angularjs-datepicker": "^2.1.9",
