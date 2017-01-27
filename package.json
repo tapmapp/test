@@ -21,7 +21,7 @@
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "*",
-    "express3-handlebars": "*",
+	"express3-handlebars": "*",
     "mongoose": "^4.7.7",
     "morgan": "*",
     "passport": "*",
@@ -31,3 +31,4 @@
     "serve-favicon": "^2.3.2"
   }
 }
+
