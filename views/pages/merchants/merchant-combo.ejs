@@ -1,0 +1,109 @@
+<html ng-app="Whola">
+<head>
+	<% include ../../partials/head %>
+</head>
+<body ng-controller="promotionCtr">
+	<header>
+		<% include ../../partials/header %>
+	</header>
+	<main>
+		<div class="container promotion">
+			<% include ../../partials/merchants/merchant-menu %>
+			<div class="col-md-10">
+				<% include ../../partials/merchants/promo-menu %>
+				<div class="step">
+					<div class="step">
+						<h2>Combo</h2>
+						<p>Este tipo de campaña te permite ofrecer dos productos a precio único.</p>
+					</div>
+					<div class="step">
+						<h2>1 - Selección de productos</h2>
+						<p>Una vez hayas seleccionado el primer producto, te ofreceremos una lista de los productos que mejor encajan con el tipo de producto que quieres promocionar. Dicha selección irá en función de la duración de la promoción y de los hábitos de consumo de los clientes.</p>
+						<p>Si no te convence nuestra selección, siempre podrás elegir los productos de forma manual.</p>
+						<ul class="frecuencySale">
+							<li class="title">Frencuencia de venta:</li>
+							<li class="active">semanal</li>
+							<li>mensual</li>
+							<li>anual</li>
+						</ul>
+						<div class="findProduct">
+							<input ng-model="search"><i class="fa fa-search" aria-hidden="true"></i>
+						</div>
+						<div class="resultsNumber">
+							<i class="fa fa-database" aria-hidden="true"></i> <span ng-bind="products.length + ' Resultados'">
+						</div>
+						<div class="productTitle">
+							<div class="idProduct">Id</div>
+							<div class="name">Product</div>
+							<div class="category">Category</div>
+							<div class="buyPrice">Pur. Price</div>
+							<div class="margin">Margin</div>
+							<div class="salePrice">Sale Price</div>
+							<div class="stock">Stock.</div>
+							<div class="expires">Caducidad</div>
+							<div class="frecuency">Frec.</div>
+							<div class="ranking"><i class="fa fa-star" aria-hidden="true"></i></div>
+						</div>
+						<div class="productList" ng-repeat="product in products" ng-click="selectProduct(product)">
+							<div class="idProduct" ng-bind="'#' + product.idProduct">Id</div>
+							<div class="name" ng-bind="product.brand + ' - ' + product.name"></div>
+							<div class="category" ng-bind="product.idCategory.name"></div>
+							<div class="buyPrice" ng-bind="(product.buyPrice | number : 2) + ' €'"></div>
+							<div class="margin" ng-bind="(product.price - product.buyPrice | number : 2) + ' €'"></div>
+							<div class="salePrice" ng-bind="(product.price | number : 2) + ' €'"></div>
+							<div class="stock" ng-bind="product.stock"></div>
+							<div class="expires" ng-bind="product.expiryDate | date : 'dd/MM/yyyy'"></div>
+							<div class="frecuency">NA</div>
+							<div class="ranking">NA</div>
+						</div>
+						<div class="next right">Siguiente<img src="../../img/triangle.png"></div>
+					</div>
+					<h2>2 - Duración de la campaña</h2>
+					<p>En función de la duración de la campaña y la frecuencia de compra de los consumidores, te ofreceremos un listado con los clientes que más probabilidades tienen de hacer uso de la promoción.</p>
+					<div class="datePicker">
+						<span>Fecha de Inicio</span><br/>
+						<datepicker date-format="dd-MM-yyyy">
+							<input ng-model="dateStart" type="text"/>
+						</datepicker>
+					</div>
+					<div class="datePicker">
+						<span>Fecha Final</span><br/>
+						<datepicker date-format="dd-MM-yyyy">
+							<input ng-model="dateEnd" type="text"/>
+						</datepicker>
+					</div>
+					<div class="next left">Siguiente<img src="../../img/triangle.png"></div>
+				</div>
+			
+			</div>
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-1 text-center">
+					<form name="myForm">
+						<div class="form-group">
+							<input type="text" class="form-control input-lg text-center" placeholder="idProduct" ng-model="newProduct.idProduct" required>
+							<br>
+							<input type="text" class="form-control input-lg text-center" placeholder="idCompany" ng-model="newProduct.idCompany" required>
+							<br>
+							<input type="text" class="form-control input-lg text-center" placeholder="brand" ng-model="newProduct.brand" required>
+							<br>
+							<input type="text" class="form-control input-lg text-center" placeholder="name" ng-model="newProduct.name" required>
+							<br>
+							<input type="text" class="form-control input-lg text-center" placeholder="price" ng-model="newProduct.price" required>
+							<br>
+							<input type="text" class="form-control input-lg text-center" placeholder="expiryDate" ng-model="newProduct.expiryDate" required>
+						</div>
+
+						<!-- Acciones que podemos realizar en el formulario -->
+						<button type="submit" class="btn btn-success btn-lg" ng-click="registerProduct()" ng-disabled="myForm.$invalid || selected">Registrar</button>
+						<button type="submit" class="btn btn-warning btn-lg" ng-click="updateProducts(newProduct)" ng-disabled="!newProduct.idProduct || !newProduct.idCompany || !newProduct.brand || !newProduct.name || !newProduct.price || !newProduct.expiryDate || !selected">Modificar</button>
+						<button type="submit" class="btn btn-danger btn-lg" ng-click="removeProducts(newProduct)" ng-disabled="!newProduct.idProduct || !newProduct.idCompany || !newProduct.brand || !newProduct.name || !newProduct.price || !newProduct.expiryDate || !selected">Borrar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<% include ../../partials/footer %>
+	</footer>
+</body>
+</html>

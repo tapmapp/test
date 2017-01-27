@@ -1,0 +1,33 @@
+<html ng-app="Whola">
+<head>
+	<% include ../partials/head %>
+</head>
+<body>
+	<header>
+		<% include ../partials/header %>
+	</header>
+	<main>
+		<div class="users-slider">
+			<h1>La mejor oferta en tus manos.</h1>
+			<h3>Benefíciate de ofertas únicas basadas en tus hábitos de consumo.<br/>Descarga nuestra App y disfruta del nuevo sistema de compra.</h3>
+			<ul class="app-icons">
+				<li><img src="/img/apple-icon.png" alt="Apple Icon"></li>
+				<li><img src="/img/android-icon.png" alt="Android Icon"></li>
+			</ul>
+			<div class="view-animate-container">
+			    <div ng-view class="view-animate"></div>
+			  </div>
+		</div>
+		<div class="container users">
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-8">
+				<h1>Blog</h1>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+</body>
+</html>

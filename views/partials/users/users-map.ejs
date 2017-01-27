@@ -1,0 +1,56 @@
+<div id="map"></div>
+<script>
+function initMap() {
+
+var myStores = [
+  {lat: 40.4536410, lng: -3.6573423},
+  {lat: 40.4576520, lng: -3.6673954},
+  {lat: 40.4536834, lng: -3.6973265},
+  {lat: 40.4536121, lng: -3.6173128}
+];
+
+var markers = [];
+var me = {lat: 40.4502390, lng: -3.6551310};
+var image = '/img/whola-icon-store.png';
+var map = new google.maps.Map(document.getElementById('map'), {
+	zoom: 14,
+	center: me
+});
+
+var myLocation = new google.maps.Marker({
+	position: me,
+	map: map
+});
+
+function drop() {
+	//clearMarkers();
+	for (var i = 0; i < myStores.length; i++) {
+		addMarkerWithTimeout(myStores[i], i * 200);
+	}
+}
+
+function addMarkerWithTimeout(position, timeout) {
+	window.setTimeout(function() {
+		var marker = new google.maps.Marker({
+			id:'test',
+			name: 'Alimentación Wang',
+			address: 'Cidamón 10, 28043, Madrid',
+			position: position,
+			map: map,
+			icon: image,
+			animation: google.maps.Animation.DROP
+		}); 
+		markers.push(marker);
+		google.maps.event.addListener(marker, 'click', function() {
+			console.log(marker.get('id') + ' ' + marker.get('name') + ' ' + marker.get('position'));
+		});
+	}, timeout);
+}
+
+setTimeout(function(){
+	drop();
+}, 1000);
+
+}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwQ7U1YLUINnFkrxDC4KNLmtHNfnZ-_As&callback=initMap"></script>

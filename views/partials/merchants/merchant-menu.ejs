@@ -1,0 +1,40 @@
+<div class="col-md-2 merchant-menu">
+	<ul class="menu">
+		<% if(merchantMenu == 'stores') { %>
+			<li class="active"><a href="/merchants/stores">Stores</a></li>
+		<% } else { %>
+			<li><a href="/merchants/stores">Stores</a></li>
+		<% } %>
+		
+		<% if(merchantMenu == 'campaign') { %>
+			<li class="active"><a href="/merchants/campaign">Campaign</a></li>
+		<% } else { %>
+			<li><a href="/merchants/campaign">Campaign</a></li>
+		<% } %>
+	
+		<% if(merchantMenu == 'products') { %>
+			<li class="active"><a href="/merchants/products">Products</a></li>
+		<% } else { %>
+			<li><a href="/merchants/products">Products</a></li>
+		<% } %>
+	
+		<% if(merchantMenu == 'clients') { %>
+			<li class="active"><a href="/merchants/clients">Clients</a></li>
+		<% } else { %>
+			<li><a href="/merchants/clients">Clients</a></li>
+		<% } %>
+		
+		<% if(merchantMenu == 'sales') { %>
+			<li class="active"><a href="/merchants/sales">Sales</a></li>
+		<% } else { %>
+			<li><a href="/merchants/sales">Ventas</a></li>
+		<% } %>
+		
+		<% if(merchantMenu == 'research') { %>
+			<li class="active"><a href="/merchants/research">Research</a></li>
+		<% } else { %>
+			<li><a href="/merchants/research">Estudio</a></li>
+		<% } %>
+
+	</ul>
+</div>

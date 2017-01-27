@@ -1,0 +1,104 @@
+<html ng-app="Whola">
+<head>
+	<% include ../partials/head %>
+</head>
+<body>
+	<header>
+		<% include ../partials/header %>
+	</header>
+	<main>
+		
+					
+					<% if(accountType == 'users') { %>
+					
+					<form action="/users/register" method="post">
+						<div class="form-group">
+							<label for="name">User name:</label>
+							<input type="text" id="name" name="name" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="text" id="email" name="email" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" id="password" name="password" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="confirmPassword">Confirm Password</label>
+							<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+							<input type="password" id="confirmPassword" name="confirmPassword" class="form-control">
+						</div>
+
+					<% } %>
+					
+					<% if(accountType == 'merchants') { %>
+					
+					<form action="/merchants/register" method="post">
+						<div class="form-group">
+							<label for="name">Merchant name:</label>
+							<input type="text" id="name" name="name" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="text" id="email" name="email" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" id="password" name="password" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="confirmPassword">Confirm Password</label>
+							<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+							<input type="password" id="confirmPassword" name="confirmPassword" class="form-control">
+						</div>
+						
+					<% } %>
+					
+					<% if(accountType == 'companies') { %>
+					<div class="register-slider">
+					
+					<div class="container logIn">
+						<div class="row">
+							<div class="col-md-4 col-md-offset-2">
+							<h1>Registrate y comienza a sacar partido a tu información.</h1>
+							
+							<h3>Billones de transacciones quedan sin registrar diariamente.<br/>¿ A qué esperas para comenzar a registrar las tuyas?</h3>
+							</div>
+							<div class="col-md-4 col-md-offset-1">
+								<% if (hasErrors) { %>
+								    <div class="alert alert-danger">
+						        		<p><%= messages %></p>
+								    </div>
+								<% } %>
+								<form action="/companies/register" method="post">
+									<div class="form-group">
+										<label for="name">Companie name:</label>
+										<input type="text" id="name" name="name" class="form-control">
+									</div>
+									<div class="form-group">
+										<label for="email">Email</label>
+										<input type="text" id="email" name="email" class="form-control">
+									</div>
+									<div class="form-group">
+										<label for="password">Password</label>
+										<input type="password" id="password" name="password" class="form-control">
+									</div>
+									<div class="form-group">
+										<label for="confirmPassword">Confirm Password</label>
+										<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+										<input type="password" id="confirmPassword" name="confirmPassword" class="form-control">
+									</div>
+						
+					<% } %>
+						<button type="submit">Register</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+</body>
+</html>

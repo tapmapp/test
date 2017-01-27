@@ -1,0 +1,133 @@
+<html ng-app="Whola">
+<head>
+	<% include ../../partials/head %>
+</head>
+<body ng-controller="clientsCtr">
+	<header>
+		<% include ../../partials/header %>
+	</header>
+	<main>
+		<% include ../../partials/users/users-map %>
+		<div class="container profile">
+			<% include ../../partials/users/users-header %>
+			<div class="col-md-1 col-md-offset-2">
+				<% include ../../partials/users/users-menu %>
+			</div>
+			<div class="col-md-6">
+			<% if (hasErrors) { %>
+		    <div class="alert alert-danger">
+				<p><%= messages %></p>
+		    </div>
+			<% } %>
+			</div>
+			<div class="col-md-6 account">
+				<form action="/users/saveUser" method="post">
+					<div class="row">
+						<div class="col-md-3 personal">
+							<h2>Account</h2>
+							<div class="field">
+								<label for="email">Email:</label>
+								<br/>
+								<input id="email" ng-model="clientInfo.email">
+							</div>
+							<div class="field">
+								<label for="password">Password:</label>
+								<br/>
+								<input id="password" type="password" ng-model="clientInfo.password">
+							</div>
+							<div class="field">
+								<label for="confirm">Confirm Password:</label>
+								<br/>
+								<input id="confirm" type="password" ng-model="clientInfo.password">
+								
+							</div>
+						</div>
+						<div class="col-md-3 personal">
+							<h2>Personal</h2>
+							<div class="field">
+								<label for="name">Name:</label>
+								<br/>
+								<input id="name" ng-model="clientInfo.name">
+							</div>
+							<div class="field">
+								<label for="lastName">Last Name:</label>
+								<br/>
+								<input id="lastName" ng-model="clientInfo.lastName">
+							</div>
+							<div class="field">
+								<label for="lastName">Birth:</label>
+								<br/>
+								<input id="lastName" ng-model="clientInfo.birth">
+							</div>
+							<div class="field">
+								<label for="nationality">Nationality:</label>
+								<br/>
+								<input id="nationality" ng-model="clientInfo.nationality">
+							</div>
+							<div class="field">
+								<label for="genre">Genre:</label>
+								<br/>
+								<input id="genre" ng-model="clientInfo.genre">
+							</div>
+							<div class="field">
+								<label for="status">Status:</label>
+								<br/>
+								<input id="status" ng-model="clientInfo.status">
+							</div>
+							<div class="field">
+								<label for="phone">Phone:</label>
+								<br/>
+								<input id="phone" ng-model="clientInfo.phone">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<h2>Address</h2>
+							<div class="field">
+								<label for="address">Address:</label>
+								<br/>
+								<input id="address" ng-model="clientInfo.address">
+							</div>
+							<div class="field">
+								<label for="postalCode">Postal Code:</label>
+								<br/>
+								<input id="postalCode" ng-model="clientInfo.pc">
+							</div>
+							<div class="field">
+								<label for="city">City:</label>
+								<br/>
+								<input id="city" ng-model="clientInfo.city">
+							</div>
+							<div class="field">
+								<label for="country">Country:</label>
+								<br/>
+								<input id="country" ng-model="clientInfo.country">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<h2>Profesional</h2>
+							<div class="field">
+								<label for="job">Job:</label>
+								<br/>
+								<input id="job" ng-model="clientInfo.job">
+							</div>
+							<div class="field">
+								<label for="avgSalary">Average salary:</label>
+								<br/>
+								<input id="avgSalary" ng-model="clientInfo.avgSalary">
+								<input type="hidden" name="registrationDate" ng-model="clientInfo.registrationDate">
+								<input type="hidden" class="crsfToken" name="_csrf" value="<%= csrfToken %>">
+							</div>
+						</div>
+						<div class="col-md-12 account-button">
+							<div ng-click="updateClient()">Save</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<% include ../../partials/footer %>
+	</footer>
+</body>
+</html>

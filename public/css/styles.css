@@ -1,0 +1,324 @@
+/* GLOBAL */
+@font-face {font-family: Whola; src: url("../fonts/whola-medium.otf") format("opentype");}
+button {background: #34b6e4; padding: 10px; text-align: center; color: white; font-weight: 300; font-size: 14px; cursor: pointer; border: 0px; min-width: 100px;}
+body {font-family:'Roboto';color:#333;font-weight:100;}
+h1 {font-weight:300; font-family:'whola';color:#585858}
+h2 {font-family:'whola';font-weight:300;margin:30px 0px 15px 0px; color:#585858;}
+h3 {font-weight:300;}
+a, a:hover {color:#585858; text-decoration:none;}
+ul {padding:0px; list-style:none;}
+
+h1.firstTitle {color:#585858; font-size: 36px;}
+h2.firstTitle {color:#585858; font-size: 28px;}
+h3.firstTitle {color:#585858; font-size:24;font-family:'whola';}
+p {color:#585858; font-size: 15px; line-height: 24px;}
+/* END GLOBAL */
+
+/* BUTTONS */
+.next {background-color: #34b6e4; padding: 0px 0px 0px 12px; color: #fff; margin: 11px 0px 0px 0px; cursor: pointer; position: relative; right: 12px;}
+.next img {position:relative;left:12px;}
+.next.right {float:right;}
+.next.left {float:left;}
+/* END BUTTONS */
+
+/* HEADER */
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {margin-left: 0px;}
+.navbar-nav {float:none;}
+.navbar-header {float:left;}
+.navbar-header .navbar-brand img {width:75px;}
+.navbar-inverse {background-color: #34b6e4;border-color: #34b6e4;border-bottom: 1px solid #569cbb;}
+.navbar-inverse .navbar-brand {color: #9d9d9d;}
+.navbar-inverse .navbar-brand {color: #FFFFFF;}
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:focus, 
+.navbar-inverse .navbar-nav>.active>a:hover {color: #fff; background-color: #34b6e4; font-weight: 300;}
+.navbar-inverse .navbar-nav>li>a {color: #fff;}
+.nav.navbar-nav.main-menu {margin: 18px 0px 0px 90px; float: left;}
+.nav.navbar-nav.main-menu li {border-right:1px solid white;}
+.nav.navbar-nav.main-menu li:last-child {border:0px;}
+.nav.navbar-nav.right-menu {margin: 18px 0px 0px 30px; float:right;}
+.nav>li>a {padding: 0px 10px 0px 10px; line-height: 15px;}
+/* END HEADER */
+
+/* DATEPICKER */
+.datePicker {float:left; width:140px;}
+.datePicker span {font-weight:300;}
+.datePicker input {text-align:center;}
+._720kb-datepicker-calendar {width:220px;}
+._720kb-datepicker-calendar-header:nth-child(odd) {background: #34b6e4;}
+/* END DATEPICKER */
+
+/* USERS */
+.users-slider {background-image: url(../img/users-background.jpg); height: 400px; background-repeat: no-repeat; background-position: 100% 0%; width:100%; margin:50px 0px 0px 0px;} 
+.users-slider h1 {position: relative;text-align: left;top: 80px;color: white; font-size: 50px; width: 730px; margin: 0 auto;}
+.users-slider h3 {position: relative; text-align: left; top: 80px; color: white; font-weight: 100; width: 730px; margin: 15px auto 0 auto; font-size: 21px; line-height: 28px;}
+
+.app-icons {list-style: none; width: 330px; margin: 20px auto 0 auto; position: relative; top: 80px; overflow: hidden; padding: 0px;}
+.app-icons li {float:left; margin: 0px 20px 0px 0px;}
+.app-icons li img {cursor:pointer;}
+
+.users h1 {margin:90px 0px 15px 0px;}
+.users h2 {margin:60px 0px 15px 0px;}
+/* END USERS */
+
+/* PROFILE */
+#map {height: 350px; width: 100%;margin-top:50px;}
+.container.profile {width:100%;}
+.profile {margin-top:60px;}
+.profile h1 {padding:0px 9px;margin: 0px 0px 60px 0px; width: 95%;}
+.profile h2 {margin:0px 0px 30px 0px;}
+.profile .points {float:right; color:#78bfd8;padding:0px 0px 0px 0px;}
+.profile .account .field {margin:0px 0px 15px 0px;}
+.profile .account .field input {padding: 10px 10px 10px 10px; width: 100%;}	
+.profile .account .account-button {text-align:center; margin:50px 0px 0px 0px;}
+
+.offer {width: 33%;float:left; margin: 0px 0px 15px 0px;}
+.offerCont {border: 1px solid #ccc; margin: 0px 15px 0px 0px; padding: 15px; cursor:pointer;}
+.offerCont h3 {margin:0px 0px 10px 0px; font-size: 18px;}
+.offerCont .idOffer {color:#78bfd8;}
+.offerCont h5 i {margin: 0px 8px 0px 0px; display: inline-table;}
+.offerCont h5 span {display: inline-table;}
+
+.store {padding: 0px 15px 20px 0px; margin: 20px 0px 0px 0px; cursor: pointer; border-bottom: 1px solid #ccc;}
+.store:hover {padding: 0px 15px 20px 0px; margin: 20px 0px 0px 0px; cursor: pointer; border-bottom: 1px solid #ccc;}
+.store h3 {font-size:18px; color:#78bfd8; margin:0px 0px 10px 0px;} 
+.store h5 {font-size:14px; line-height:18px; margin:0px 0px 3px 0px; color: #585858;}
+.store h5 i {margin: 0px 8px 0px 0px; display: inline-table;}
+.store h5 span {display: inline-table;}
+.store .experience {font-size:14px; color: #ffd400;}
+
+.purchaseCont {width:95%;}
+.purchaseCont .purchase {width:100%; border-top: 1px solid #e0e0e0; display: inline-block; cursor:pointer;}
+.purchaseCont .purchase div {float:left;line-height:42px;color:#585858; font-weight:500;padding: 0px 10px;}
+.purchaseCont .purchase div i {line-height:42px;}
+.purchaseCont .purchase .date {width:15%; }
+.purchaseCont .purchase .shop {width:55%; }
+.purchaseCont .purchase .experience {width:10%; text-align:left; color:#ffd400;padding:0px;}
+.purchaseCont .purchase .amount {width:15%;text-align:right;}
+.purchaseCont .purchase .more {width:5%;text-align:center;}
+
+.purchaseCont.active .extra {display:inherit;}
+.purchaseCont .extra {width:100%;padding:0px 0px 15px 0px;display:none; }
+.purchaseCont .extra div {float:left;line-height:30px;color:#585858; font-weight:300;}
+.purchaseCont .extra .line {width:100%; padding:0px;}
+.purchaseCont .extra .line div {line-height:30px;}
+.purchaseCont .extra .date {width:15%; }
+.purchaseCont .extra .product {width:40%; font-weight:300;padding: 0px 10px;}
+.purchaseCont .extra .quantity {width:15%; font-weight:300;text-align:center;}
+.purchaseCont .extra .experience {width:10%;}
+.purchaseCont .extra .experience i {line-height: 30px;}
+.purchaseCont .extra .amount {width: 15%; text-align: right; padding: 0px 10px 0px 0px;}
+.purchaseCont .extra .more {width:5%;}
+/* END PROFILE */
+	   
+/*COMPANIES*/
+.companies h1 {margin:90px 0px 15px 0px;}
+.companies h3 {margin:250px 0px 30px 0px;}
+.companie-header {background-image: url(../img/companies/coca-cola-header.jpg); height: 350px; background-repeat: no-repeat; background-position: 50% 0%; width:100%; margin:50px 0px 0px 0px;}
+.companies .user {font-size:18px; color:#585858;}
+.companies-logos li {margin: 40px 0px 40px 0px;}
+/*END COMPANIES*/  
+	  
+ 
+	 
+/* LOGIN*/
+.logIn {margin: 50px auto 0px auto;}
+.logIn h1 {margin:100px 0px 30px 0px; color: #585858;}
+.logIn h3 {color:#585858; line-height: 28px; font-size: 21px;}
+.logIn form {margin: 110px 0px 0px 0px; width: 90%;}
+.logIn label {color:#585858;}
+.logIn input {border-radius:0px;}
+.logIn button, .logIn button:hover {background-color: #34b6e4; border-radius:0px; border:0px; cursor:pointer; margin: 0px auto 0px auto;}
+.logIn a {color:#34b6e4; font-weight:300;}
+.logIn p {float:left;line-height:32px;}
+.form-control {border: 0px; border-bottom: 1px solid #ccc;}
+/*END LOGIN*/
+
+/*REGISTER*/
+.register-slider { background-image: url(../img/whola-register.jpg); height: 560px; background-repeat: no-repeat; background-position: 50% 20%; width: 100%; background-size: 100%; margin: 50px 0px 0px 0px;}
+/*REGISTER*/
+
+/* MERCHANT MENU */
+.merchant-menu .menu {padding:0px; list-style:none;}
+.merchant-menu .menu li {line-height:25px; cursor:pointer;}
+.merchant-menu .menu li.active a {color:#34b6e4; font-weight:300;}
+/* END MERCHANT MENU */
+
+/* MERCHANT MENU */
+.users-menu .menu {padding:0px; list-style:none;}
+.users-menu .menu li {line-height:25px; cursor:pointer;}
+.users-menu .menu li.active a {color:#34b6e4; font-weight:300;}
+/* END MERCHANT MENU */
+
+/* MERCHANTS */
+.merchants {margin-top:120px;}
+.merchants-slider {background-image: url(../img/users-background.jpg); height: 400px; background-repeat: no-repeat; background-position: 100% 0%; width:100%; margin:50px 0px 0px 0px;} 
+.merchants-slider h1 {position: relative;text-align: left;top: 70px;color: white; font-size: 50px; width: 730px; margin: 0 auto;}
+.merchants-slider h3 {position: relative; text-align: left; top: 70px; color: white; font-weight: 100; width: 730px; margin: 15px auto 0 auto; font-size: 21px; line-height: 28px;}
+.merchants-info-form {list-style:none; padding:0px; width:730px; margin:30px auto 0 auto; position:relative; top:70px;}
+.merchants-info-form li {float:left;margin:0px 20px 0px 0px;}	
+.merchants-info-form input {width: 300px; border: 0px; padding: 10px;}
+.merchants-info-form .info {width: 100px; background: #34b6e4; padding: 10px; text-align: center; color: white; font-weight: 300; font-size: 14px; cursor: pointer;}
+	
+.app-icons {list-style: none; width: 360px; margin: 0px auto 0 auto; position: relative; top: 140px; overflow: hidden; padding: 0px;}
+.app-icons li {float:left; margin: 0px 20px 0px 0px;}
+.app-icons li img {cursor:pointer;}
+
+.add-product {cursor:pointer; margin: 10px 30px 0px 15px; border: 1px solid #333;}
+.add-product h5 {margin: 20px 0px 5px 10px;}
+.add-product p {margin: 0px 0px 20px 10px;}
+.add-product:hover {background:#34b6e4; color:white;margin: 10px 30px 0px 15px;    border: 1px solid #34b6e4;}
+
+.product-detail img {width:100%; margin: 30px 0px 0px 0px;}
+
+.merchant-store .store {float:left;}
+.merchant-store .store img {width:100%;}
+/* END MERCHANTS */
+
+/* CAMPAIGN */
+.campaign h1 {margin: 0px 0px 30px 0px;}
+/* END CAMPAIGN */
+
+/* PROMOTION */
+.promotion {margin-top:100px;}
+.promotion .step {margin: 0px 0px 15px 0px; display: inline-block;width:100%;}
+.promotion .promo-menu {padding:0px; list-style:none; display: inline-block;}
+.promotion .promo-menu li {float:left; margin: 0px 30px 0px 0px;cursor:pointer;}
+.promotion .promo-menu li.active a {color:#34b6e4; font-weight:300; border-bottom:1px solid #34b6e4; padding: 0px 0px 3px 0px;}
+.promotion .promo-options {float:right;list-style:none; cursor:pointer;}
+.promotion .promo-options i {margin:0px 0px 0px 5px;}
+/* END PROMOTION */
+
+/* INVENTARIO */
+.merchants h1 {margin: 0px 0px 30px 0px;}
+.merchants .products-menu {padding:0px; list-style:none; font-size: 14px; margin: 15px 0px 0px 0px; float:right;}
+.merchants .products-menu li {margin: 0px 0px 0px 30px;float:left;cursor:pointer;font-family: 'Roboto';}
+.merchants .products-menu li i {margin:0px 5px 0px 0px;}
+/* END INVENTARIO */
+
+/* PRODUCT TABLE */
+.resultsNumber {float: right; margin: 0px 20px 0px 0px; text-align: left;}
+.resultsNumber span {margin: 0px 20px 0px 7px; font-size: 12px; font-weight: 500; line-height: 33px;}
+
+.frecuencySale {padding:0px; list-style:none; font-size: 12px; margin: 10px 0px 10px 0px; overflow: hidden;float:left;}
+.frecuencySale .title {cursor:initial;}
+.frecuencySale li:first-child, .frecuencySale li:last-child  {border-right: 0px solid #333;}
+.frecuencySale li {float:left; margin:0px 10px 0px 0px; cursor:pointer;border-right: 1px solid #333;font-weight: 300; padding: 0px 10px 0px 0px;}
+.frecuencySale li.active {color:#34b6e4; font-weight:500;}
+
+.findProduct {float:right;margin: 0px 0px 15px 0px;}
+.findProduct input {padding:5px;}
+.findProduct i {margin: 0px 10px 0px 10px; cursor: pointer; font-size: 18px;}
+
+.productTitle {width:100%; color:white; overflow: hidden; margin: 0px 0px 1px 0px;}
+.productTitle div {border-right: 1px solid #fff;background:#969696; line-height:32px; font-weight:300; font-size: 12px; cursor:pointer;}
+.productTitle .idProduct {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.productTitle .name {width:25%; float:left; padding: 0px 5px 0px 5px;}
+.productTitle .category {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.productTitle .buyPrice {width:8%; float:left; padding: 0px 5px 0px 5px;}
+.productTitle .margin {width:8%; float:left; padding: 0px 5px 0px 5px;}
+.productTitle .salePrice {width:8%; float:left; padding: 0px 5px 0px 5px;}
+.productTitle .stock {width:6%; float:left; padding: 0px 5px 0px 5px;}
+.productTitle .frecuency {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.productTitle .expires {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.productTitle .ranking {width:5%; float:left; padding: 0px 5px 0px 5px;text-align:center;}
+.productTitle .ranking i {color: yellow;line-height: 32px;}
+
+.productList {width:100%;}
+.productList:nth-child(odd) div { background:#f3f3f3;overflow: hidden; margin: 0px 0px 1px 0px; color:#333;}
+.productList:nth-child(even) div { background:#fbfbfb;overflow: hidden; margin: 0px 0px 1px 0px; color:#333;}
+.productList div {border-right: 1px solid #fff; line-height:28px; font-weight:300; font-size: 12px; cursor:pointer;}
+.productList:hover div {background:#34b6e4;color:white; font-weight:300;}
+.productList .idProduct {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.productList .name {width:25%; float:left; padding: 0px 5px 0px 5px;}
+.productList .category {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.productList .buyPrice {width:8%; float:left; padding: 0px 5px 0px 5px;}
+.productList .margin {width:8%; float:left; padding: 0px 5px 0px 5px;}
+.productList .salePrice {width:8%; float:left; padding: 0px 5px 0px 5px;}
+.productList .stock {width:6%; float:left; padding: 0px 5px 0px 5px;}
+.productList .frecuency {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.productList .expires {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.productList .ranking {width:5%; float:left; padding: 0px 5px 0px 5px;text-align:center;}
+/* END PRODUCT TABLE */
+
+/* SALES */
+.sales h1 {margin: 0px 0px 30px 0px;}
+.sales .products-menu {padding:0px; list-style:none; font-size: 14px; margin: 15px 0px 0px 0px; float:right;}
+.sales .products-menu li {margin: 0px 0px 0px 30px;float:left;cursor:pointer;}
+.sales .products-menu li i {margin:0px 5px 0px 0px;}
+/* END SALES */
+
+/* SALES TABLE */
+.salesTitle {width:100%; color:white; overflow: hidden; margin: 0px 0px 1px 0px;}
+.salesTitle div {border-right: 1px solid #fff;background:#969696; line-height:32px; font-weight:300; font-size: 12px; cursor:pointer;}
+.salesTitle .idClient {width:7%; float:left; padding: 0px 5px 0px 5px;}
+.salesTitle .idOrder {width:7%; float:left; padding: 0px 5px 0px 5px;}
+.salesTitle .name {width:30%; float:left; padding: 0px 5px 0px 5px;}
+.salesTitle .category {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.salesTitle .buyPrice {width:8%; float:left; padding: 0px 5px 0px 5px;}
+.salesTitle .margin {width:8%; float:left; padding: 0px 5px 0px 5px;}
+.salesTitle .salePrice {width:8%; float:left; padding: 0px 5px 0px 5px;}
+.salesTitle .stock {width:6%; float:left; padding: 0px 5px 0px 5px;}
+.salesTitle .frecuency {width:5%; float:left; padding: 0px 5px 0px 5px;}
+.salesTitle .expires {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.salesTitle .ranking {width:5%; float:left; padding: 0px 5px 0px 5px;text-align:center;}
+.salesTitle .ranking i {color: yellow;line-height: 32px;}
+
+.salesList {width:100%;}
+.salesList:nth-child(odd) div { background:#f3f3f3;overflow: hidden; margin: 0px 0px 1px 0px; color:#333;}
+.salesList:nth-child(even) div { background:#fbfbfb;overflow: hidden; margin: 0px 0px 1px 0px; color:#333;}
+.salesList div {border-right: 1px solid #fff; line-height:28px; font-weight:300; font-size: 12px; cursor:pointer;}
+.salesList:hover div {background:#34b6e4;color:white; font-weight:300;}
+.salesList .idClient {width:7%; float:left; padding: 0px 5px 0px 5px;}
+.salesList .idOrder {width:7%; float:left; padding: 0px 5px 0px 5px;}
+.salesList .name {width:30%; float:left; padding: 0px 5px 0px 5px;}
+.salesList .category {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.salesList .buyPrice {width:8%; float:left; padding: 0px 5px 0px 5px;}
+.salesList .margin {width:8%; float:left; padding: 0px 5px 0px 5px;}
+.salesList .salePrice {width:8%; float:left; padding: 0px 5px 0px 5px;}
+.salesList .stock {width:6%; float:left; padding: 0px 5px 0px 5px;}
+.salesList .frecuency {width:5%; float:left; padding: 0px 5px 0px 5px;}
+.salesList .expires {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.salesList .ranking {width:5%; float:left; padding: 0px 5px 0px 5px;text-align:center;}
+/* END SALES TABLE */
+
+/* CLIENTS TABLE */
+.clientsTitle {width:100%; color:white; overflow: hidden; margin: 0px 0px 1px 0px;}
+.clientsTitle div {border-right: 1px solid #fff;background:#969696; line-height:32px; font-weight:300; font-size: 12px; cursor:pointer;}
+.clientsTitle .idClient {width:15%; float:left; padding: 0px 5px 0px 5px;}
+.clientsTitle .name {width:30%; float:left; padding: 0px 5px 0px 5px;}
+.clientsTitle .postalCode {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.clientsTitle .frequency {width:14%; float:left; padding: 0px 5px 0px 5px;}
+.clientsTitle .avExpense {width:13%; float:left; padding: 0px 5px 0px 5px;}
+.clientsTitle .salary {width:13%; float:left; padding: 0px 5px 0px 5px;}
+.clientsTitle .ranking {width:5%; float:left; padding: 0px 5px 0px 5px;text-align:center;}
+.clientsTitle .ranking i {color: yellow;line-height: 32px;}
+
+.clientsList {width:100%;}
+.clientsList:nth-child(odd) div { background:#f3f3f3;overflow: hidden; margin: 0px 0px 1px 0px; color:#333;}
+.clientsList:nth-child(even) div { background:#fbfbfb;overflow: hidden; margin: 0px 0px 1px 0px; color:#333;}
+.clientsList div {border-right: 1px solid #fff; line-height:28px; font-weight:300; font-size: 12px; cursor:pointer;}
+.clientsList:hover div {background:#34b6e4;color:white; font-weight:300;}
+.clientsList .idClient {width:15%; float:left; padding: 0px 5px 0px 5px;}
+.clientsList .name {width:30%; float:left; padding: 0px 5px 0px 5px;}
+.clientsList .postalCode {width:10%; float:left; padding: 0px 5px 0px 5px;}
+.clientsList .frequency {width:14%; float:left; padding: 0px 5px 0px 5px;}
+.clientsList .avExpense {width:13%; float:left; padding: 0px 5px 0px 5px;}
+.clientsList .salary {width:13%; float:left; padding: 0px 5px 0px 5px;}
+.clientsList .ranking {width:5%; float:left; padding: 0px 5px 0px 5px;text-align:center;}
+.clientsList .ranking i {color: yellow;line-height: 32px;}
+/* END CLIENTS TABLE */
+
+/* RESEARCH */
+.research h1 {margin: 0px 0px 30px 0px;}
+/* END RESEARCH */
+
+/* FOOTER */
+footer {background:#585858; height:300px; margin:90px 0px 0px 0px;}
+.footer {color:white;}
+.footer ul {padding:0px; list-style:none; margin:30px 0px 0px 0px;}
+.footer ul li {line-height:24px;}
+.footer ul li a {color:white; line-height:24px;}
+.footer ul li a img {width:75px; margin-bottom: 10px;}
+.footer ul .title {font-weight:300; font-size: 16px; margin-bottom: 2px;}
+/* END FOOTER */

@@ -1,0 +1,91 @@
+<html ng-app="Whola">
+<head>
+	<% include ../../partials/head %>
+</head>
+<body ng-controller="salesCtr">
+	<header>
+		<% include ../../partials/header %>
+	</header>
+	<main>
+		<div class="container merchants">
+			<% include ../../partials/merchants/merchant-menu %>
+			<div class="col-md-10">
+				<h1 class="firstTitle">Sales</h1>
+				<h2>My Sales</h2>
+				<sales-chart></sales-chart>
+				<ul class="frecuencySale">
+					<li class="title">Frencuencia de venta:</li>
+					<li class="active">semanal</li>
+					<li>mensual</li>
+					<li>anual</li>
+				</ul>
+				<div class="findProduct">
+					<input ng-model="search"><i class="fa fa-search" aria-hidden="true"></i>
+				</div>
+				<div class="resultsNumber">
+					<i class="fa fa-database" aria-hidden="true"></i> <span ng-bind="products.length + ' Resultados'">
+				</div>
+				<div class="salesTitle">
+					<div class="idClient">Client</div>
+					<div class="idOrder">Order</div>
+					<div class="name">Producto</div>
+					<div class="category">Categoría</div>
+					<div class="expires">Date</div>
+					<div class="buyPrice">P. Compra</div>
+					<div class="margin">Profit</div>
+					<div class="salePrice">P. Venta</div>
+					<div class="stock">Quantity</div>
+					<div class="ranking"><i class="fa fa-star" aria-hidden="true"></i></div>
+				</div>
+				<div class="salesList" ng-repeat="product in products" ng-click="selectProduct(product)">
+					<div class="idClient" ng-bind="'#' + product.idProduct">Id</div>
+					<div class="idOrder" ng-bind="'#' + product.idOrder">Id</div>
+					<div class="name" ng-bind="product.brand + ' - ' + product.name"></div>
+					<div class="category" ng-bind="product.idCategory.name"></div>
+					<div class="expires" ng-bind="product.expiryDate | date : 'dd/MM/yyyy'"></div>
+					<div class="buyPrice" ng-bind="(product.buyPrice | number : 2) + ' €'"></div>
+					<div class="margin" ng-bind="(product.price - product.buyPrice | number : 2) + ' €'"></div>
+					<div class="salePrice" ng-bind="(product.price | number : 2) + ' €'"></div>
+					<div class="stock" ng-bind="product.stock"></div>
+					
+					<div class="ranking">NA</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-4">
+						<h2>Sales by Category</h2>
+					
+						<div class="productList" ng-repeat="category in categories" ng-click="selectCategory(category)">
+							<div class="idCategory" ng-bind="'#' + category.idCategory"></div>
+							<div class="name" ng-bind="category.name"></div>
+						</div>
+					
+						<div class="resultsNumber">
+							<i class="fa fa-database" aria-hidden="true"></i> <span ng-bind="categories.length + ' Resultados'">
+						</div>
+					
+						<form name="myForm1">
+							<div>
+								<input type="text" class="form-control input-lg text-center" placeholder="Category Id" ng-model="newCategory._id" required>
+								<br/>
+								<input type="text" class="form-control input-lg text-center" placeholder="Category Id" ng-model="newCategory.idCategory" required>
+								<br/>
+								<input type="text" class="form-control input-lg text-center" placeholder="Category Name" ng-model="newCategory.name" required>
+							</div>
+					
+							<button type="submit" class="btn btn-success btn-lg" ng-click="registerCategory()" ng-disabled="myForm1.$invalid || selected">Registrar</button>
+							<button type="submit" class="btn btn-warning btn-lg" ng-click="updateCategory(newCategory)" ng-disabled="!newCategory.idCategory || !newCategory.name || !selected">Modificar</button>
+							<button type="submit" class="btn btn-danger btn-lg" ng-click="removeCategory(newCategory)" ng-disabled="!newCategory.idCategory || !newCategory.name || !selected">Borrar</button>
+						</form>
+					</div>
+				
+				</div>
+			</div>
+			
+		</div>
+	</main>
+	<footer>
+		<% include ../../partials/footer %>
+	</footer>
+</body>
+</html>

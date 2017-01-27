@@ -1,0 +1,33 @@
+<div class="users-menu">
+	<ul class="menu">
+		<% if(clientMenu == 'account') { %>
+			<li class="active"><a href="/users/account">Account</a></li>
+		<% } else { %>
+			<li><a href="/users/account">Account</a></li>
+		<% } %>
+		
+		<% if(clientMenu == 'offers') { %>
+			<li class="active"><a href="/users/offers">Offers</a></li>
+		<% } else { %>
+			<li><a href="/users/offers">Offers</a></li>
+		<% } %>
+		
+		<% if(clientMenu == 'activity') { %>
+			<li class="active"><a href="/users/activity">Activity</a></li>
+		<% } else { %>
+			<li><a href="/users/activity">Activity</a></li>
+		<% } %>
+		
+		<% if(clientMenu == 'stores') { %>
+			<li class="active"><a href="/users/stores">Stores</a></li>
+		<% } else { %>
+			<li><a href="/users/stores">Stores</a></li>
+		<% } %>
+		
+		<% if(clientMenu == 'friends') { %>
+			<li class="active"><a href="/users/friends">Friends</a></li>
+		<% } else { %>
+			<li><a href="/users/friends">Friends</a></li>
+		<% } %>
+	</ul>
+</div>

@@ -1,0 +1,81 @@
+<html ng-app="Whola">
+<head>
+	<% include ../../partials/head %>
+</head>
+<body ng-controller="clientsCtr">
+	<header>
+		<% include ../../partials/header %>
+	</header>
+	<main>
+		<div class="container merchants">
+			<% include ../../partials/merchants/merchant-menu %>
+			<div class="col-md-10">
+				<h1 class="firstTitle">Clients</h1>
+				<div id="saleDetail" class="row"></div>
+				<div class="step">
+					<h2>My Clients</h2>
+					<ul class="frecuencySale">
+						<li class="title">Frencuencia de venta:</li>
+						<li class="active">weekly</li>
+						<li>monthly</li>
+						<li>annual</li>
+					</ul>
+					<div class="findProduct">
+						<input ng-model="search"><i class="fa fa-search" aria-hidden="true"></i>
+					</div>
+					<div class="resultsNumber">
+						<i class="fa fa-database" aria-hidden="true"></i> <span ng-bind="products.length + ' Resultados'">
+					</div>
+					<div class="clientsTitle">
+						<div class="idClient">Client ID</div>
+						<div class="name">Client Name</div>
+						<div class="postalCode">Postal Code</div>
+						<div class="frequency">Pruchase Frequency</div>
+						<div class="avExpense">Av. Expense</div>
+						<div class="salary">Salary</div>
+						<div class="ranking"><i class="fa fa-star" aria-hidden="true"></i></div>
+					</div>
+					<div class="clientsList" ng-repeat="product in products" ng-click="selectProduct(product)">
+						<div class="idClient" ng-bind="'#' + product.idProduct"></div>
+						<div class="name" ng-bind="product.brand + ' - ' + product.name"></div>
+						<div class="postalCode" ng-bind="28043"></div>
+						<div class="frequency">3 times / week</div>
+						<div class="avExpense" ng-bind="(product.buyPrice | number : 2) + ' €'"></div>
+						<div class="salary">25000 €</div>
+						<div class="ranking">NA</div>
+					</div>
+				</div>
+				<div class="step" style="width:40%">
+					<h2>Sales by Category</h2>
+					
+					<div class="productList" ng-repeat="category in categories" ng-click="selectCategory(category)">
+						<div class="idCategory" ng-bind="'#' + category.idCategory"></div>
+						<div class="name" ng-bind="category.name"></div>
+					</div>
+					
+					<div class="resultsNumber">
+						<i class="fa fa-database" aria-hidden="true"></i> <span ng-bind="categories.length + ' Resultados'">
+					</div>
+					
+					<form name="myForm1">
+						<div>
+							<input type="text" class="form-control input-lg text-center" placeholder="Category Id" ng-model="newCategory._id" required>
+							<br/>
+							<input type="text" class="form-control input-lg text-center" placeholder="Category Id" ng-model="newCategory.idCategory" required>
+							<br/>
+							<input type="text" class="form-control input-lg text-center" placeholder="Category Name" ng-model="newCategory.name" required>
+						</div>
+					
+						<button type="submit" class="btn btn-success btn-lg" ng-click="registerCategory()" ng-disabled="myForm1.$invalid || selected">Registrar</button>
+						<button type="submit" class="btn btn-warning btn-lg" ng-click="updateCategory(newCategory)" ng-disabled="!newCategory.idCategory || !newCategory.name || !selected">Modificar</button>
+						<button type="submit" class="btn btn-danger btn-lg" ng-click="removeCategory(newCategory)" ng-disabled="!newCategory.idCategory || !newCategory.name || !selected">Borrar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<% include ../../partials/footer %>
+	</footer>
+</body>
+</html>

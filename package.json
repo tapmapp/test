@@ -1,0 +1,28 @@
+{
+  "name": "ejemploMEAN",
+  "version": "1.0.0",
+  "description": "Sencilla app con MEAN",
+  "main": "server.js",
+  "author": "Francisco Roca",
+  "dependencies": {
+    "angular-google-chart": "^0.1.0",
+    "angularjs-datepicker": "^2.1.9",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "*",
+    "csurf": "^1.9.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongoose": "^4.7.7",
+    "morgan": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.3.2"
+  }
+}

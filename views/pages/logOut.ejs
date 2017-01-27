@@ -1,0 +1,30 @@
+<h1><%= title %></h1>
+
+<% if(success) { %>
+helloo no errors
+<%  } else {
+	if(errors){
+%>
+<section>
+	<ul>
+		<% for(error in errors) { %>
+		<li><%= errors[error].msg %></li>
+		<% } %>
+	</ul>
+</section>
+<% }} %>
+<form action="/users/submit" method="post">
+	<div class="input">
+		<label for="email">Email</label>
+		<input type="text" id="email" name="email">
+	</div>
+	<div class="input">
+		<label for="password">Password</label>
+		<input type="password" id="password" name="password">
+	</div>
+	<div class="input">
+		<label for="confirmPassword">Confirm Password</label>
+		<input type="password" id="confirmPassword" name="confirmPassword">
+	</div>
+	<button type="submit">Submit</button>
+</form>

@@ -1,0 +1,124 @@
+<html ng-app="Whola">
+<head>
+	<% include ../../partials/head %>
+</head>
+<body ng-controller="clientsCtr">
+	<header>
+		<% include ../../partials/header %>
+	</header>
+	<main>
+		<% include ../../partials/users/users-map %>
+		<div class="container profile">
+			<% include ../../partials/users/users-header %>
+			<div class="col-md-1 col-md-offset-2">
+				<% include ../../partials/users/users-menu %>
+			</div>
+			<div class="col-md-6">
+				
+				<h2>My Purchases</h2>
+				<div class="purchaseCont">
+					<div class="purchase">
+						<div class="date">12/10/2016</div>
+						<div class="shop">Alimentación Wang</div>
+						<div class="experience"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+						<div class="amount">15.50 €</div>
+						<div class="more"><i class="fa fa-plus" aria-hidden="true"   ng-click="showPurchaseInfo($event)"></i></div>
+					</div>
+					<div class="extra">
+						<div class="line">
+							<div class="date">&nbsp;</div>
+							<div class="product">Heineken 33cl</div>
+							<div class="quantity">4</div>
+							<div class="experience"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+							<div class="amount">5.50 €</div>
+						</div>
+						<div class="line">
+							<div class="date">&nbsp;</div>
+							<div class="product">Napoly Carpaccio</div>
+							<div class="quantity">1</div>
+							<div class="experience"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+							<div class="amount">5.00 €</div>
+						</div>
+						<div class="line">
+							<div class="date">&nbsp;</div>
+							<div class="product">Beef Galiac</div>
+							<div class="quantity">250gr</div>
+							<div class="experience"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+							<div class="amount">5.00 €</div>
+						</div>
+					</div>
+				</div>
+				<div class="purchaseCont"  ng-click="showPurchaseInfo($event)">
+					<div class="purchase">
+						<div class="date">12/10/2016</div>
+						<div class="shop">Alimentación Wang</div>
+						<div class="experience"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+						<div class="amount">15.50 €</div>
+						<div class="more"><i class="fa fa-plus" aria-hidden="true" ></i></div>
+					</div>
+					<div class="extra">
+						<div class="line">
+							<div class="date">&nbsp;</div>
+							<div class="product">Heineken 33cl</div>
+							<div class="quantity">4</div>
+							<div class="experience"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+							<div class="amount">5.50 €</div>
+						</div>
+						<div class="line">
+							<div class="date">&nbsp;</div>
+							<div class="product">Napoly Carpaccio</div>
+							<div class="quantity">1</div>
+							<div class="experience"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+							<div class="amount">5.00 €</div>
+						</div>
+						<div class="line">
+							<div class="date">&nbsp;</div>
+							<div class="product">Beef Galiac</div>
+							<div class="quantity">250gr</div>
+							<div class="experience"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+							<div class="amount">5.00 €</div>
+						</div>
+					</div>
+				</div>
+				<div class="purchaseCont"  ng-click="showPurchaseInfo($event)">
+					<div class="purchase">
+						<div class="date">12/10/2016</div>
+						<div class="shop">Alimentación Wang</div>
+						<div class="experience"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+						<div class="amount">15.50 €</div>
+						<div class="more"><i class="fa fa-plus" aria-hidden="true" ></i></div>
+					</div>
+					<div class="extra">
+						<div class="line">
+							<div class="date">&nbsp;</div>
+							<div class="product">Heineken 33cl</div>
+							<div class="quantity">4</div>
+							<div class="experience"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+							<div class="amount">5.50 €</div>
+						</div>
+						<div class="line">
+							<div class="date">&nbsp;</div>
+							<div class="product">Napoly Carpaccio</div>
+							<div class="quantity">1</div>
+							<div class="experience"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+							<div class="amount">5.00 €</div>
+						</div>
+						<div class="line">
+							<div class="date">&nbsp;</div>
+							<div class="product">Beef Galiac</div>
+							<div class="quantity">250gr</div>
+							<div class="experience"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+							<div class="amount">5.00 €</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<% include ../../partials/users/users-stores %>
+		</div>
+	</main>
+	
+	<footer>
+		<% include ../../partials/footer %>
+	</footer>
+</body>
+</html>

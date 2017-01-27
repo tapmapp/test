@@ -1,0 +1,68 @@
+<div class="col-md-12 product-detail">
+	<h2>Product Detail
+	<ul class="products-menu">
+		<li><i class="fa fa-pencil" aria-hidden="true"></i> Editar Producto</li>
+	</ul>
+	</h2>
+	<div class="row">
+		<div class="col-md-3">
+			<img src="../../../img/products/drinks/cocacola-original.png" alt="Cocacola Original">
+		</div>
+		<div class="col-md-3">
+			
+			<label for="category">Brand:</label>
+			<br/>
+			<input type="text" placeholder="brand" ng-model="newProduct.brand" required>
+			<br/>
+			<label for="category">Name:</label>
+			<br/>
+			<input type="text" placeholder="name" ng-model="newProduct.name" required>
+			<br/>
+			<!--
+			<label for="idProduct">Product ID:</label>
+			<br/>
+			<input type="text" id="idProduct" placeholder="Product ID" ng-model="newProduct.idProduct" required>
+			<br/>
+			<label for="idCompany">Company ID:</label>
+			<br/>
+			<input type="text" id="idCompany" placeholder="idCompany" ng-model="newProduct.idCompany" required>
+			<br/>-->
+			<label for="category">Category:</label>
+			<br/>
+			<input type="text" placeholder="Category" ng-model="newProduct.idCategory.name">
+			<br/>
+			<label for="category">Image:</label>
+			<br/>
+			<input type="text" placeholder="Image" ng-model="newProduct.img" required>
+		</div>
+		<div class="col-md-3">
+	<!--
+	<select ng-model="newProduct.idCategory" ng-change="selectCategoryItem(newProduct)">
+		<option ng-repeat="category in categories" ng-value="category._id" ng-bind="category.name" ng-selected="$index=0"></option>
+	</select>
+	<br/>-->	
+		<label for="category">Purchase Price:</label>
+		<br/>
+		<input type="text" placeholder="Buy Price" ng-model="newProduct.buyPrice" required>
+		<br/>
+		<label for="category">Sale Price:</label>
+		<br/>
+		<input type="text" placeholder="Price" ng-model="newProduct.price" required>
+		<br/>
+		<label for="category">Stock:</label>
+		<br/>
+		<input type="text" placeholder="Stock" ng-model="newProduct.stock" required>
+		<br/>
+		<label for="category">Expire Date:</label>
+		<br/>
+		<input type="text" placeholder="expiryDate" ng-model="newProduct.expiryDate" required>
+		
+		
+	</div>
+	<div class="col-md-3">
+	<!-- Acciones que podemos realizar en el formulario -->
+	<button type="submit" class="btn btn-success btn-lg" ng-click="registerProduct()" ng-disabled="myForm.$invalid || selected">Registrar</button>
+	<button type="submit" class="btn btn-warning btn-lg" ng-click="updateProducts(newProduct)" ng-disabled="!newProduct.idProduct || !newProduct.idCompany || !newProduct.idCategory || !newProduct.brand || !newProduct.name || !newProduct.price || !newProduct.expiryDate || !selected">Modificar</button>
+	<button type="submit" class="btn btn-danger btn-lg" ng-click="removeProducts(newProduct)" ng-disabled="!newProduct.idProduct || !newProduct.idCompany || !newProduct.idCategory || !newProduct.brand || !newProduct.name || !newProduct.price || !newProduct.expiryDate || !selected">Borrar</button>
+	</div>
+</div>
