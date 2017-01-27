@@ -10,7 +10,7 @@ router.use(csrfProtection);
 	
 /* COMPANIES */
 router.get('/', function(req, res) {
-	res.render('../views/pages/companies/companies', {csrfToken: req.csrfToken(), headerMenu:'companies'} );
+	res.render('../views/pages/companies/companies', {csrfToken: req.csrfToken(), headerMenu:'companies',messages: messages, hasErrors: messages.length > 0} );
 });
 
 router.get('/login', notLoggedIn, function(req, res, next) {
