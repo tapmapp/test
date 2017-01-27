@@ -18,7 +18,7 @@ var mongoose = require('mongoose'); 				// mongoose para mongodb
 var port  	 = process.env.PORT || 8080; 			// Cogemos el puerto 8080
 
 // Hacemos la conexión a la base de datos de Mongo con nombre "MeanExample"
-mongoose.connect('mongodb://node:usuario:password@ec2-52-56-133-40.eu-west-2.compute.amazonaws.com:27017/admin'); 	
+mongoose.connect('mongodb://usuario:password@ec2-52-56-133-40.eu-west-2.compute.amazonaws.com:27017/admin'); 	
 //mongodb://{NEW USERNAME}:{NEW PASSWORD}@{EC2 URL}:{PORT}/dummyDB
 require('./config/passport');
 
