@@ -10,6 +10,7 @@ router.use(csrfProtection);
 	
 /* COMPANIES */
 router.get('/', function(req, res) {
+	var messages = req.flash('error');
 	res.render('../views/pages/companies/companies', {csrfToken: req.csrfToken(), headerMenu:'companies',messages: messages, hasErrors: messages.length > 0} );
 });
 
@@ -50,9 +51,9 @@ router.post('/register', passport.authenticate('local.register-companie', {
         req.session.oldUrl = null;
         res.redirect(oldUrl);
     } else {
-		var companieName = req.body.name;
-		console.log(companieName);
-		res.redirect('/companies/' + companieName);
+	var companieName = req.body.name;
+	console.log(companieName);
+	res.redirect('/companies/' + companieName);
     }
 });
 
