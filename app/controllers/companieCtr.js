@@ -5,14 +5,14 @@ exports.getCompanieInfo = function (req, res, next) {
 	var companieName = req.params.name;
 	companieName = companieName.replace('-', ' ');
 	Companie.find({name: companieName}).exec(function(err, companieInfo) {
-		if(err)
-			res.redirect('/not-found');
-		
-		if(companieInfo.length == 0){
+		if(err) {
 			res.redirect('/not-found');
 		} else {
-			res.render('../views/pages/companies/companie-account', {headerMenu:'companies', companyInfo: companieInfo[0]});
+			if(companieInfo.length == 0){
+				res.redirect('/not-found');
+			} else {
+				res.render('../views/pages/companies/companie-account', {headerMenu:'companies', companyInfo: companieInfo[0]});
+			}
 		}
-		
 	});
 }
