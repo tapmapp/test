@@ -1,7 +1,7 @@
 {
   "name": "ejemploMEAN",
   "version": "1.0.0",
-  "description": "Sencilla app con MEAN",
+  "description": "Whola Proyect",
   "main": "server.js",
   "author": "Francisco Roca",
   "repository" : { 
